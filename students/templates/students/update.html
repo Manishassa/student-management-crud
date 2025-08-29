@@ -1,0 +1,88 @@
+<!-- <h2>Edit Student</h2>
+<form method="POST">
+    {% csrf_token %}
+    Name: <input type="text" name="name" value="{{ student.name }}"><br>
+    Email: <input type="email" name="email" value="{{ student.email }}"><br>
+    Age: <input type="number" name="age" value="{{ student.age }}"><br>
+    Department: <input type="text" name="department" value="{{ student.department }}"><br>
+    <button type="submit">Update</button>
+</form> -->
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Student</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+<div class="container mt-5">
+    <div class="card shadow p-4">
+        <h2 class="text-center mb-4">Update Student</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" name="name" class="form-control" value="{{ student.name }}" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" name="email" class="form-control" value="{{ student.email }}" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Age</label>
+                <input type="number" name="age" class="form-control" value="{{ student.age }}" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Department</label>
+                <input type="text" name="department" class="form-control" value="{{ student.department }}" required>
+            </div>
+            <button type="submit" class="btn btn-success w-100">Update</button>
+            <a href="{% url 'student_list' %}" class="btn btn-secondary w-100 mt-2">Back</a>
+        </form>
+    </div>
+</div>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+    <style>
+        /* Same CSS as create.html for consistency */
+        body { font-family: Arial, sans-serif; background: #f4f4f4; }
+        .container { width: 400px; margin: 50px auto; background: white; padding: 20px; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        h2 { text-align: center; }
+        label { display: block; margin-top: 10px; }
+        input { width: 100%; padding: 8px; margin-top: 5px; border: 1px solid #ccc; border-radius: 3px; }
+        button { margin-top: 15px; width: 100%; padding: 10px; background: #007bff; color: white; border: none; border-radius: 3px; cursor: pointer; }
+        button:hover { background: #0056b3; }
+        a { display: block; text-align: center; margin-top: 10px; text-decoration: none; color: #007bff; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Edit Student</h2>
+        <form method="POST">
+            {% csrf_token %}
+            <label>Name:</label>
+            <input type="text" name="name" value="{{ student.name }}" required>
+
+            <label>Email:</label>
+            <input type="email" name="email" value="{{ student.email }}" required>
+
+            <!-- <label>Age:</label>
+            <input type="number" name="age" value="{{ student.age }}" required> -->
+
+            <label>Branch:</label>
+            <input type="text" name="Branch" value="{{ student.Branch }}" required>
+
+            <button type="submit">Update</button>
+        </form>
+        <a href="{% url 'student_list' %}">Back to List</a>
+    </div>
+</body>
+</html>
